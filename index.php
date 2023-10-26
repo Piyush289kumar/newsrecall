@@ -7,8 +7,9 @@
 
 <body>
     <?php include("header.php");
-    include("config.php");  ?>
-<section class="banner">
+    include("config.php"); ?>
+    <section class="banner">
+        <!-- comment testing for git hub  -->
         <div class="banner-main-content mb-3">
             <h2 style="padding-left: 4%;">ई-समाचार</h2>
             <!-- <h3>World's Leading Tech News Portal</h3> -->
@@ -126,14 +127,14 @@
         </div> -->
     </section>
     <section class="banner">
-        <div class="banner-main-content" style="z-index: 2;margin-bottom:-90px ;" >
-           <h2 style="padding-left: 4%;"><a href="pramukh-news.php"  style="
+        <div class="banner-main-content" style="z-index: 2;margin-bottom:-90px ;">
+            <h2 style="padding-left: 4%;"><a href="pramukh-news.php" style="
                     padding: 6px 15px;
                 background: transparent;
                     color:black;
                     border-bottom:#5A5A5A;
                     border-radius: 24px;
-                  " >प्रमुख समाचार<i class="fa-solid fa-arrow-right"></i></a></h2>
+                  ">प्रमुख समाचार<i class="fa-solid fa-arrow-right"></i></a></h2>
             <!-- <h3>World's Leading Tech News Portal</h3> -->
             <div class="hot-topic">
 
@@ -144,27 +145,27 @@
                 if (mysqli_num_rows($result_sql_show_user) > 0) {
                     while ($row = mysqli_fetch_assoc($result_sql_show_user)) {
                 ?>
-                        <div class="col-12" id="frameHeigh"  style="border: 2px solid grey; border-radius: 12px; overflow:hidden; height:90%;">
-                        <iframe width="100%" height="110%" src="https://www.youtube.com/embed/<?php echo $row['vlink'] ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
+                        <div class="col-12" id="frameHeigh" style="border: 2px solid grey; border-radius: 12px; overflow:hidden; height:90%;">
+                            <iframe width="100%" height="110%" src="https://www.youtube.com/embed/<?php echo $row['vlink'] ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
                     picture-in-picture; web-share" allowfullscreen>
-                        </iframe>
-                 </div> 
+                            </iframe>
+                        </div>
                 <?php
                     }
                 }
                 ?>
 
             </div>
-           
+
         </div>
         <div class="banner-sub-content" style="z-index: 3; margin-bottom:-90px ;">
-        <h2 style="padding-left: 4%;"><a href="medicalDharm.php"  style="
+            <h2 style="padding-left: 4%;"><a href="medicalDharm.php" style="
                     padding: 6px 15px;
                 background: transparent;
                     color:black;
                     border-bottom:#5A5A5A;
                     border-radius: 24px;
-                  " >स्टोरी<i class="fa-solid fa-arrow-right"></i></a></h2>
+                  ">स्टोरी<i class="fa-solid fa-arrow-right"></i></a></h2>
             <div class="hot-topic">
                 <?php
                 $sql_show_user = "SELECT * FROM video_sec_tb
@@ -173,17 +174,17 @@
                 if (mysqli_num_rows($result_sql_show_user) > 0) {
                     while ($row = mysqli_fetch_assoc($result_sql_show_user)) {
                 ?>
-                         <div class="col-12" id="frameHeigh"  style="border: 2px solid grey; border-radius: 12px; overflow:hidden; height:90%;">
-                        <iframe width="100%" height="110%" src="https://www.youtube.com/embed/<?php echo $row['vlink'] ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
+                        <div class="col-12" id="frameHeigh" style="border: 2px solid grey; border-radius: 12px; overflow:hidden; height:90%;">
+                            <iframe width="100%" height="110%" src="https://www.youtube.com/embed/<?php echo $row['vlink'] ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
                     picture-in-picture; web-share" allowfullscreen>
-                        </iframe>
-                 </div> 
+                            </iframe>
+                        </div>
                 <?php
                     }
                 }
                 ?>
             </div>
-           
+
         </div>
     </section>
     <hr>
@@ -252,9 +253,9 @@
     </main> -->
     <!-- Card Section -->
     <!-- button -->
- <div class="col-md-12 text-center">
-    <a href="index.php" class="btn my-1" style="border: 1px solid transparent; border-radius: 12px; margin-top: 5px; padding:6px 65px; font-size:25px;">
-    &#160;&#160;Top 10 खबरें&#160;&#160;</a>
+    <div class="col-md-12 text-center">
+        <a href="index.php" class="btn my-1" style="border: 1px solid transparent; border-radius: 12px; margin-top: 5px; padding:6px 65px; font-size:25px;">
+            &#160;&#160;Top 10 खबरें&#160;&#160;</a>
     </div>
     <!-- button -->
 
@@ -273,7 +274,7 @@
             LEFT JOIN top_post ON post.post_id = top_post.tp_id
             LEFT JOIN user ON post.author = user.user_id
             limit 10";
-           
+
             $result_sql_show_user = mysqli_query($conn, $sql_show_user) or die("Query Failed!!");
             if (mysqli_num_rows($result_sql_show_user) > 0) {
                 while ($row = mysqli_fetch_assoc($result_sql_show_user)) {
@@ -310,11 +311,12 @@
     <!-- Card Section -->
 
     <!-- button -->
- <div class="col-md-12 text-center">
-    <a href="cardSection.php" class="btn btn-primary mb-3" style="border: 1px solid transparent; border-radius: 12px; margin-top: 5px; padding:6px 65px;">
-    &#160;&#160;अन्य खबरे देखिए&#160;&#160;<i class="fa-solid fa-arrow-right"></i></a>
+    <div class="col-md-12 text-center">
+        <a href="cardSection.php" class="btn btn-primary mb-3" style="border: 1px solid transparent; border-radius: 12px; margin-top: 5px; padding:6px 65px;">
+            &#160;&#160;अन्य खबरे देखिए&#160;&#160;<i class="fa-solid fa-arrow-right"></i></a>
     </div>
     <!-- button -->
     <?php include("footer.php"); ?>
 </body>
+
 </html>
